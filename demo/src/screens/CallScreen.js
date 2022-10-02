@@ -158,12 +158,16 @@ function CallScreen() {
 
     return (
         <div>
-            <label>{"User: " + localUsername}</label>
-            <label>{"Room: " + roomName}</label>
-            <audio autoPlay muted controls ref={localVideoRef}/>
-            <audio autoPlay controls ref={remoteVideoRef}/>
-            {/* <video autoPlay muted controls height='350' width='350' poster={img_url} playsInline ref={localVideoRef} /> */}
-            {/* <video autoPlay muted controls height='350' width='350' poster={img_url} playsInline ref={localVideoRef} /> */}
+            <div>
+                <label>{"User: " + localUsername}</label>
+                <label>{"Room: " + roomName}</label>
+                <audio autoPlay controls ref={remoteVideoRef}/>
+                {/* <video autoPlay muted controls height='350' width='350' poster={img_url} playsInline ref={remoteVideoRef} /> */}
+            </div>
+            <div class="invisible_div">
+                <audio autoPlay muted controls ref={localVideoRef}/>
+                {/* <video autoPlay muted controls height='350' width='350' poster={img_url} playsInline ref={localVideoRef} /> */}
+            </div>
         </div>
     );
 }
