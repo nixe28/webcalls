@@ -5,8 +5,9 @@ import HomeScreen from "./HomeScreen";
 function RouteList() {
     return (
         <Routes>
-            <Route path="/" element={<HomeScreen />} />
-            <Route path="/call/:username/:room" element={<CallScreen />} />
+            {/* <Route path="/" element={<HomeScreen />} /> */}
+            {/* <Route path="/call/:username/:room" element={<CallScreen />} /> */}
+            <Route path="/" element={<CallScreen />} />
         </Routes>
     );
 }

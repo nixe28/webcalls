@@ -6,9 +6,11 @@ import "./CallScreen.css";
 export const img_url="https://klike.net/uploads/posts/2019-07/medium/1562335929_10.jpg"
 
 function CallScreen() {
-    const params = useParams();
-    const localUsername = params.username;
-    const roomName = params.room;
+    // const params = useParams();
+    // const localUsername = params.username;
+    // const roomName = params.room;
+    const localUsername = "user"
+    const roomName = "room"
     const localVideoRef = useRef(null);
     const remoteVideoRef = useRef(null);
     const saveCallRef = useRef(null);
@@ -159,8 +161,8 @@ function CallScreen() {
     return (
         <div>
             <div>
-                <label>{"User: " + localUsername}</label>
-                <label>{"Room: " + roomName}</label>
+                {/* <label class="invisible_div">{"User: " + localUsername}</label>
+                <label class="invisible_div">{"Room: " + roomName}</label> */}
                 <audio autoPlay controls ref={remoteVideoRef}/>
                 {/* <video autoPlay muted controls height='350' width='350' poster={img_url} playsInline ref={remoteVideoRef} /> */}
             </div>
